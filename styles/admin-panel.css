@@ -1,0 +1,109 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+.admin-header {
+    background-color: #0047AB;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.admin-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Add Event Section */
+.add-event-section {
+    margin: 20px;
+    text-align: center;
+}
+
+.add-event-section h2 {
+    color: #0047AB;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.event-title-input,
+.event-description-input {
+    width: 90%;
+    max-width: 800px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #B0C4DE;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.event-description-input {
+    height: 150px;
+    resize: none;
+}
+
+.add-image-btn {
+    background-color: #0047AB;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.add-image-btn:hover {
+    background-color: #003399;
+}
+
+/* Event Table Section */
+.event-table-section {
+    margin: 20px;
+    text-align: center;
+}
+
+.submit-btn {
+    background-color: #0047AB;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.submit-btn:hover {
+    background-color: #003399;
+}
+
+.event-table {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.event-table th,
+.event-table td {
+    border: 1px solid #B0C4DE;
+    padding: 10px;
+    text-align: center;
+}
+
+.event-table th {
+    background-color: #0047AB;
+    color: white;
+    font-size: 1rem;
+}
+
+.event-table td {
+    background-color: #E6F7FF;
+    font-size: 0.9rem;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="styles/admin-panel.css">
+</head>
+<body>
+    <header class="admin-header">
+        <h1>ADMIN PANEL</h1>
+    </header>
+
+    <section class="add-event-section">
+        <h2>Add Event</h2>
+        <input type="text" class="event-title-input" placeholder="Event Name">
+        <textarea class="event-description-input" placeholder="Event Description"></textarea>
+        <button class="add-image-btn">Add Image +</button>
+    </section>
+
+    <section class="event-table-section">
+        <button class="submit-btn">Submit</button>
+        <table class="event-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Phone</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be dynamically inserted here -->
+            </tbody>
+        </table>
+    </section>
+</body>
+
+<script>
+    async function loadRegistrations() {
+        const response = await fetch('fetch_registrations.php');
+        const registrations = await response.json();
+
+        const tableBody = document.querySelector('.event-table tbody');
+        tableBody.innerHTML = '';
+
+        registrations.forEach(reg => {
+            const row = `<tr>
+                <td>${reg.name}</td>
+                <td>${reg.age}</td>
+                <td>${reg.gender}</td>
+                <td>${reg.phone}</td>
+                <td>${reg.city}</td>
+                <td>${reg.state}</td>
+                <td>${reg.email}</td>
+            </tr>`;
+            tableBody.innerHTML += row;
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', loadRegistrations);
+</script>
+</html>

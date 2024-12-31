@@ -1,0 +1,156 @@
+/* Reset */
+body, h1, h2, h3, p, ul, li, a, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #5c2d91;
+}
+
+.header .logo img {
+    height: 50px;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.nav ul li a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.btn-register {
+    padding: 10px 20px;
+    background-color: #ffc107;
+    color: #000;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background 0.3s ease;
+}
+
+.btn-register:hover {
+    background-color: #ff9800;
+}
+
+/* Event Banner */
+.event-banner img {
+    width: 100%;
+    height: auto;
+}
+
+/* Event Content */
+.event-content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.event-title h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #5c2d91;
+}
+
+.event-description p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* Footer */
+.footer {
+    background-color: #5c2d91;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-logo img {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a:hover {
+    color: #ffc107;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #ccc;
+}
+/* Event Navigation */
+.event-navigation {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.pagination {
+    display: inline-flex;
+    list-style: none;
+    padding: 0;
+    gap: 10px;
+}
+
+.pagination li a {
+    text-decoration: none;
+    color: #5c2d91;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border: 1px solid #5c2d91;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination li a.active {
+    background: #5c2d91;
+    color: white;
+}
+
+.pagination li a:hover {
+    background: #5c2d91;
+    color: white;
+}

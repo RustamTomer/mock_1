@@ -1,0 +1,913 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    cursor: default;
+}
+
+/* Fonts and Colors */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+  
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: linear-gradient(90deg, #5c2d91, #8a4ee4);
+    color: #fff;
+}
+  
+.header .logo img {
+    width: auto; /* Maintain the aspect ratio */
+    height: 80px; /* Adjust to a uniform height */
+    object-fit: contain; /* Ensures no stretching or distortion */
+}
+  
+  
+.header .nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+  
+.header .nav ul li {
+    display: inline-block;
+}
+  
+.header .nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+  
+.header .nav ul li a:hover {
+    color: #ddd;
+}
+  
+.header .btn-register {
+    background: #5c2d91; /* Purple background consistent with theme */
+    color: #fff; /* White text for contrast */
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+  
+.header .btn-register:hover {
+    background: #8a4ee4; /* Slightly lighter hover effect */
+    color: #fff;
+}
+  
+  
+
+/* Purple Bar Below Image */
+.purple-bar {
+    background-color: #5c2d91;
+    height: 40px; /* Reduced height of the purple bar */
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centers the navigation horizontally */
+    align-items: center; /* Centers the navigation vertically */
+}
+
+/* Top Bar */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Add padding for spacing between the content */
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.logo img {
+    height: 60px;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Adjust spacing between links */
+    margin: 0; /* Remove unnecessary margins */
+    padding: 0; /* Remove unnecessary padding */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px; /* Adjusted font size for better balance */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Event Section */
+.section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 20px; /* Adjust padding to align closer to the purple bar */
+    gap: 300px;
+}
+
+/* Event Preview Container */
+.event-preview-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px; /* Add spacing between the image and text */
+    margin: 40px 0; /* Add top and bottom spacing */
+}
+
+.event-preview {
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.event-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.event-preview:hover img {
+    transform: scale(1.1); /* Zoom in on hover */
+}
+
+.event-preview .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+.event-preview:hover .overlay {
+    opacity: 1; /* Reveal overlay on hover */
+}
+
+/* Initiative Text Styling */
+.initiative-text {
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+    color: #5c2d91;
+    line-height: 1.5;
+    max-width: 400px; /* Restrict text width for better readability */
+}
+
+.initiative-text h2 {
+    font-size: 28px; /* Increase text size */
+    text-transform: uppercase;
+    color: #4a2277;
+    letter-spacing: 1px;
+}
+
+/* About Us Section */
+.about-us-section {
+    position: relative;
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.about-us-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./assets/placeholder_1.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(50%); /* Reduce brightness */
+    z-index: -1; /* Push behind content */
+    transition: transform 0.8s ease; /* Smooth zoom effect */
+}
+
+.about-us-section:hover::before {
+    transform: scale(1.1); /* Zoom background image */
+}
+
+.about-us-content {
+    position: relative; /* Keep text above the background */
+    z-index: 1; /* Ensure text stays on top */
+}
+
+.about-us-content h2 {
+    font-size: 36px; /* Increase size for header */
+    font-weight: bold;
+    color: #f4f4f4;
+    margin-bottom: 20px;
+}
+
+.about-us-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%; /* Ensure footer spans the full width */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .event-preview {
+        width: 90%;
+    }
+}
+
+/* Prevent text cursor on non-editable elements */
+.logo img, 
+.nav-links li a, 
+.header, 
+.purple-bar, 
+.event-preview, 
+footer {
+    user-select: none; /* Prevents text selection */
+    cursor: default; /* Changes cursor to default pointer */
+}
+
+/* Prevent text cursor and selection */
+header, .purple-bar, .footer, .carousel-btn {
+    user-select: none;
+}
+
+
+/* Ensure no focus outline appears */
+a, button {
+    outline: none; /* Removes focus outline */
+    text-decoration: none; /* Ensures no underline styling */
+    user-select: none; /* Prevent text cursor on click */
+    cursor: pointer; /* Optional: Changes cursor to pointer for interactivity */
+}
+
+/* Logo Fix */
+.logo img {
+    user-select: none;
+    cursor: pointer; /* Pointer cursor for clickable elements */
+}
+
+/* Navigation Links */
+.nav-links li a {
+    user-select: none; /* Prevent text selection */
+    cursor: pointer; /* Makes it clear that these are clickable */
+}
+
+/* Disable text cursor on specific elements */
+.header, .purple-bar, .event-preview, footer {
+    user-select: none;
+    cursor: default; /* Keeps the default arrow cursor */
+}
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #5c2d91;
+    margin: 20px 0;
+}
+
+/* Events Section */
+.events-section {
+    padding: 20px 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 24px;
+    color: #5c2d91;
+    margin-bottom: 20px;
+}
+
+/* Carousel Container */
+.carousel-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 15px;
+    background: white;
+    padding: 20px;
+}
+
+/* Carousel */
+.carousel {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Event Card */
+.event-card {
+    flex: 0 0 calc(100% / 3 - 20px);
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+.event-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.event-content {
+    padding: 10px;
+}
+
+.event-category {
+    font-size: 12px;
+    color: #5c2d91;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.event-card h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 5px 0;
+}
+
+.event-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Carousel Buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #5c2d91;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background-color: #4a2277;
+}
+
+/* Left Button */
+.prev-btn {
+    left: 0px;
+}
+
+/* Right Button */
+.next-btn {
+    right: 15px;
+}
+
+/* Indicators (Dots) */
+.carousel-indicators {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background: #5c2d91;
+}
+
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .prev-btn,
+    .next-btn {
+        left: -30px;
+        right: -30px;
+    }
+}
+
+
+/* Organizing Committee Section */
+.organizing-committee-section {
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.committee-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Committee Member */
+.committee-member {
+    width: 100px;
+    height: auto; /* Allow for text below the image */
+    text-align: center; /* Center-align text */
+}
+
+.committee-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Member Info */
+.member-info {
+    margin-top: 10px;
+}
+
+.member-name {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.member-designation {
+    font-size: 12px;
+    color: #666;
+    margin: 0;
+}
+
+
+@media (max-width: 768px) {
+    .committee-container {
+        gap: 10px;
+    }
+}
+
+/* Add spacing between rows */
+.committee-container {
+    margin-bottom: 20px; /* Adjust spacing between rows */
+}
+/* Sponsors Section */
+.sponsors-section {
+    margin: 50px 20px; /* Adds spacing from other sections */
+    text-align: center;
+}
+
+.sponsors-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+    gap: 20px; /* Space between sponsor logos */
+    justify-content: center; /* Centers the grid items */
+    align-items: center;
+    max-width: 900px; /* Restrict maximum width */
+    margin: 0 auto; /* Center align the container */
+}
+
+.sponsor-logo img {
+    width: 100%; /* Make logos responsive */
+    max-width: 100%; /* Prevent overscaling */
+    object-fit: contain; /* Ensures logos maintain aspect ratio */
+    border-radius: 10px; /* Add slight rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for design */
+}
+/* Contact Section */
+.contact-section {
+    margin: 50px auto;
+    max-width: 400px; /* Center and restrict width */
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff; /* White background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #5c2d91;
+    outline: none;
+    box-shadow: 0 0 5px rgba(92, 45, 145, 0.5);
+}
+
+textarea {
+    resize: none; /* Prevent resizing */
+}
+
+.form-submit-btn {
+    padding: 10px 20px;
+    background-color: #5c2d91;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.form-submit-btn:hover {
+    background-color: #4a2277;
+}
+/* Footer Styles */
+footer {
+    background: #f5f5f5; /* Softer color for footer */
+    color: #333;
+    padding: 20px 40px;
+}
+  
+footer .footer-social a {
+    color: #5c2d91; /* Consistent with the theme */
+    font-size: 20px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+  
+footer .social-icons a:hover {
+    color: #8a4ee4; /* Subtle hover color */
+}
+  
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo img {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+.footer-social {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-social h3 {
+    margin-bottom: 10px;
+    color: #5c2d91;
+}
+
+.footer-social a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px; /* Adjust the size of the icons */
+    margin: 0 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-social a:hover {
+    color: #f39c12; /* Change to your desired hover color */
+}
+
+
+.footer-links h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 5px 0;
+}
+
+.footer-links ul li a {
+    color: #5c2d91;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #f39c12;
+}
+
+.footer-contact h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-contact a {
+    color: #5c2d91;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    color: #f39c12;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+}
+@media (max-width: 768px) {
+    .event-card {
+        flex: 0 0 calc(100% / 1.5 - 10px); /* Adjust to show 1.5 cards */
+    }
+}
+/* Registration Form */
+.registration-form {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    transform: translateX(100%);
+    transition: transform 0.5s ease;
+    display: none;
+    z-index: 1000;
+}
+
+.registration-form h2 {
+    text-align: center;
+    color: #5c2d91;
+    padding: 20px 0;
+}
+
+.registration-form form {
+    padding: 20px;
+}
+
+.registration-form input,
+.registration-form select,
+.registration-form button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.registration-form button {
+    background: #5c2d91;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    right: 50px;
+}
+
+/* Close Button Styling */
+.registration-form .close-btn {
+    position: absolute;
+    top: 15px; /* Position at the top */
+    right: 15px; /* Align to the right corner */
+    background: transparent; /* No background color */
+    border: none;
+    font-size: 24px;
+    color: #5c2d91;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.registration-form .close-btn:hover {
+    color: #8a4ee4; /* Change only text color on hover */
+}
+
+/* Remove hover background effect */
+.registration-form .close-btn:focus {
+    outline: none;
+}
+
+
+  
+@media (max-width: 768px) {
+    .registration-form {
+        max-width: 90%;
+    }
+
+    .registration-form h2 {
+        font-size: 20px;
+    }
+
+    .registration-form input,
+    .registration-form select,
+    .registration-form textarea {
+        font-size: 14px;
+    }
+
+    .registration-form .submit-btn {
+        font-size: 14px;
+    }
+}
+@media (max-width: 768px) {
+    .registration-form {
+        max-width: 90%; /* Make the form width responsive */
+        margin-left: 10px; /* Adjust the left margin */
+    }
+
+    .registration-overlay {
+        overflow-y: auto; /* Allow vertical scrolling on smaller screens */
+    }
+}
+
+
+.registration-form {
+    border: 2px solid red; /* Debugging border */
+}
+.register-btn {
+    background: #5c2d91; /* Purple background consistent with theme */
+    color: #fff; /* White text for contrast */
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.register-btn:hover {
+    background: #8a4ee4; /* Slightly lighter hover effect */
+    color: #fff;
+}
+/* Loading Screen Styles */
+.loading {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    border: 4px solid #ddd;
+    border-top: 4px solid #5c2d91;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* Active Link Styling */
+.nav-links .active-link {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+/* Registration CTA Styling */
+.registration-cta {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #5c2d91;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.registration-cta:hover {
+    background-color: #4a2277;
+}
+
+.about-us {
+    padding: 60px 40px;
+    background: #f9f9f9; /* Light background for better readability */
+    text-align: center;
+  }
+  
+  .about-us h2 {
+    color: #5c2d91; /* Theme color */
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .about-us p {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 800px; /* Limits the width for readability */
+  }
+  
+  
